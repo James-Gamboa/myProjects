@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="public/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Babylonica&family=Cinzel:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lancelot&display=swap"
+    rel="stylesheet" />
+  <title>Components</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <h2 class="title_components">Header</h2>
+  <header>
+    <h1>Leiva´s Hotels</h1>
+    <button id="open" class="menu-open">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <path fill="#000" d="M2 18h20v-2H2v2zM2 13h20v-2H2v2zM2 6v2h20V6H2z" />
+      </svg>
+    </button>
+    <nav class="nav" id="nav">
+      <button class="menu-close" id="close">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <path fill="#ffff"
+            d="M19 6.4L17.6 5L12 10.6L6.4 5L5 6.4l5.6 5.6L5 17.6l1.4 1.4l5.6-5.6l5.6 5.6l1.4-1.4l-5.6-5.6L19 6.4z" />
+        </svg>
+      </button>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinies.html">Destinies</a></li>
+        <li><button class="button" onclick="openFormL()">Log in</button></li>
+        <li><button class="button" onclick="openFormS()">Sign up</button></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- BUTTONS -->
+  <h2 class="title_components">Buttons</h2>
+  <div>
+    <button class="button">Log in</button>
+    <button class="button">Sign up</button>
+  </div>
+  <!-- LOG IN AND SIGN UP -->
+  <h2 class="title_components">Log in/ Sign up Pop-up Form</h2>
+  <button class="button" onclick="openFormL()">Log in</button>
+  <div class="form-popup form-popup__component" id="form-log-in">
+    <button class="form-popup__btn--close" onclick="closeFormL()">X</button>
+    <form action="" class="form-popup__container">
+      <h2 class="form-popup__tittle">LOG IN</h2>
+      <label class="visually-hidden" for="name">Enter your name</label>
+      <input class="form-popup__input" required type="text" id="name" name="name" placeholder="Name" />
+      <label class="visually-hidden" for="last-name">Enter your last name</label>
+      <input class="form-popup__input" required type="text" id="last-name" name="last-name" placeholder="Last name" />
+      <label class="visually-hidden" for="email">Enter your email</label>
+      <input class="form-popup__input" required type="email" id="email" name="email" placeholder="Email" />
+      <label class="visually-hidden" for="password">Enter your password</label>
+      <input class="form-popup__input form-popup__input--last" type="password" id="password" name="password"
+        placeholder="Password" />
+      <div class="form-popup__center">
+        <button type="submit" class="button">Start</button>
+      </div>
+    </form>
+  </div>
+  <button class="button" onclick="openFormS()">Sign up</button>
+  <div class="form-popup form-popup__sign-up form-popup__components" id="form-sign-up">
+    <button class="form-popup__btn--close form-popup__btn--close--sign" onclick="closeFormS()">
+      X
+    </button>
+    <form action="" class="form-popup__container">
+      <h2 class="form-popup__tittle">SIGN UP</h2>
+      <label class="visually-hidden" for="email">Enter your email</label>
+      <input class="form-popup__input" required type="email" id="email" name="email" placeholder="Email" />
+      <label class="visually-hidden" for="password">Enter your password</label>
+      <input class="form-popup__input" required type="password" id="password" name="password" placeholder="Password" />
+      <a class="form-popup__forget form-popup__center" href="#">Forgot Password</a>
+      <div class="form-popup__center">
+        <button type="submit" class="button">Start</button>
+      </div>
+    </form>
+  </div>
+  <!-- CARD SLIDER -->
+  <h2 class="title_components">Card Slider / Rooms Slider</h2>
+  <div class="slideshow__container">
+    <ul class="card__container" id="sliderList"></ul>
+    <button class="slideshow__arrow--previus" onclick="previous()">❮</button>
+    <button class="slideshow__arrow--next" onclick="next()">❯</button>
+  </div>
+  <div class="slideshow__dots">
+    <span class="slideshow__dots--pass" onclick="currentSlide(1)"></span>
+    <span class="slideshow__dots--pass" onclick="currentSlide(2)"></span>
+    <span class="slideshow__dots--pass" onclick="currentSlide(3)"></span>
+  </div>
+  <!-- HOTEL INFORMATION -->
+  <h2 class="title_components">Information about the hotel</h2>
+  <div class="container__flex">
+    <img src="public/img/hotelImage/mallorca-hotel.png" alt="" class="container__flex--img" />
+    <div class="container__flex--list">
+      <h2 class="subtitle__main">Helios Mallorca Hotel & Apartments</h2>
+      <img src="public/img/hotelImage/stars.png" alt="stars"/>
+      <p class="text__address">
+        Carrer de la Carabela, 7, Palma de Mallorca, Palma de Mallorca, Mallorca, 7610
+      </p>
+      <a>+34 971 26 42 50</a>
+    </div>
+  </div>
+  <!-- Footer -->
+  <h2 class="title_components">Footer</h2>
+  <footer class="footer">
+    <div class="footer-info">
+      <div class="footer-info__item">
+        <span class="footer-info__item__title">Company</span>
+        <ul class="footer-info__item__list">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-info__item">
+        <span class="footer-info__item__title">Support</span>
+        <ul class="footer-info__item__list">
+          <li><a href="#">Traveler Resources</a></li>
+          <li><a href="#">Discover</a></li>
+          <li><a href="#">Booking</a></li>
+        </ul>
+      </div>
+      <div class="footer-info__item">
+        <span class="footer-info__item__title">Places</span>
+        <ul class="footer-info__item__list">
+          <li><a href="#">All destinations</a></li>
+          <li><a href="#">Car hire</a></li>
+          <li><a href="#">Places of interest</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- SOCIAL MEDIA -->
+    <div class="footer-social">
+      <ul class="footer-social__list">
+        <li>
+          <a href="#" class="footer-social__list-whatsapp"><span class="visually-hidden">WhatsApp</span></a>
+        </li>
+        <li>
+          <a href="#" class="footer-social__list-facebook"><span class="visually-hidden">Facebook</span></a>
+        </li>
+        <li>
+          <a href="#" class="footer-social__list-instagram"><span class="visually-hidden">Instagram</span></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+<script src="scripts/hotels.js"></script>
+<script src="scripts/pop-up.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/menu.js"></script>
+<script src="scripts/cards.js"></script>
+</html>

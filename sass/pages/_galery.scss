@@ -1,0 +1,17 @@
+.galery {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+@media (min-width: 700px) {
+  .galery {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .galery {
+    grid-template-columns: auto auto auto;
+  }
+}

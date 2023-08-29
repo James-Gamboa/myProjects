@@ -1,0 +1,31 @@
+{
+  "name": "project-1-final-project",
+  "version": "1.0.0",
+  "description": "MEMBERS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w sass -o public/css",
+    "sass-build": "node-sass sass -o public/css --output-style compressed",
+    "dev-server": "live-server --watch=\"*.html,public\"",
+    "eslint": "eslint js",
+    "dev": "concurrently \"npm run sass\" \"npm run dev-server\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/James-Gamboa/Project-1-Final-Project.git"
+  },
+  "author": "James",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/James-Gamboa/Project-1-Final-Project/issues"
+  },
+  "homepage": "https://github.com/James-Gamboa/Project-1-Final-Project#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "live-server": "^1.2.2",
+    "livereload": "^0.9.3",
+    "node": "^19.7.0",
+    "node-sass": "^8.0.0",
+    "sass": "^1.58.3"
+  }
+}

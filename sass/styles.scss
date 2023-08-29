@@ -1,0 +1,18 @@
+@import "utils/variables";
+
+@import "base/typography";
+@import "base/global";
+
+@import"pages/hotel";
+@import "pages/index";
+@import "pages/form";
+@import "pages/destiny";
+@import "pages/galery";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import"components/cards";
+@import"components/buttons";
+@import"components/pop-up";
+@import"components/image";

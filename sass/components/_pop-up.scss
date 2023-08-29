@@ -1,0 +1,94 @@
+.form-popup {
+  display: none;
+  position: absolute;
+  margin-top: 545px;
+  border: 3px solid $white-dark;
+  z-index: 9;
+}
+  
+.form-popup__container {
+  width: 200px;
+  padding: 30px 20px;
+  background-color:$white;
+}
+  
+.form-popup__tittle {
+  font-size: 30px;
+  text-align: center;  
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: normal;
+	color: $dark-red;
+}
+
+.form-popup__input {
+  font-size: 8px;
+  padding: 6px;
+  margin-bottom: 15px;
+  width: 100%;
+  border-radius: 10px;
+	margin-top: 5px;
+}
+
+.form-popup__center {
+  display: flex;
+  justify-content: center;
+}
+
+.form-popup__btn--close {
+  background: none;
+  margin-left: 205px;
+  margin-top: 2px;
+	cursor: pointer;
+	border: none;
+  position: absolute;
+}
+
+.form-popup__forget {
+  color: $dark-red;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 12px;
+	margin-bottom: 10px;
+}
+
+.form-popup__forget:hover {
+  opacity: 80%;
+}
+
+.form-popup__input--last {
+  margin-bottom: 12px;
+}
+
+.form-popup__components {
+  margin-top: 5px;
+  margin-left: 90px;
+}
+
+.form-popup__component {
+  margin-top: 5px;
+}
+
+@media (min-width: 621px) {
+  .form-popup {
+    margin-right: -52%;
+    margin-top: 390px;
+  }
+
+  .form-popup__sign-up {
+    margin-top: 327px;
+  }
+
+  .form-popup__components {
+    margin-top: 5px;
+    margin-left: 90px;
+  }
+
+  .form-popup__component {
+    margin-top: 5px;
+
+  .form-popup__sign-up {
+    margin-top: 327px;
+  }
+ }
+}
